@@ -1,0 +1,50 @@
+{
+	"name": "@aoshizuku/pi-memory",
+	"version": "0.1.0",
+	"private": false,
+	"type": "module",
+	"description": "Persistent project memory for pi: a MEMORY.md index plus per-topic files, stored in the project or on the local machine.",
+	"license": "MIT",
+	"author": "AoShizuku",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AoShizuku/pi-memory.git"
+	},
+	"homepage": "https://github.com/AoShizuku/pi-memory#readme",
+	"bugs": {
+		"url": "https://github.com/AoShizuku/pi-memory/issues"
+	},
+	"keywords": [
+		"pi-package",
+		"pi-extension",
+		"memory",
+		"context"
+	],
+	"pi": {
+		"extensions": [
+			"./src/index.ts"
+		]
+	},
+	"files": [
+		"src",
+		"!src/**/*.test.ts"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*",
+		"@earendil-works/pi-tui": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "^1.5.0",
+		"@earendil-works/pi-tui": "^1.5.0",
+		"@types/node": "^22.0.0",
+		"typescript": "^5.9.0",
+		"vitest": "^3.2.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
